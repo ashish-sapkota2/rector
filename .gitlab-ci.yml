@@ -1,0 +1,47 @@
+# Define the stages of the pipeline
+stages:
+  - install
+  - test
+  - build
+  - deploy
+
+# Install dependencies
+install:
+  stage: install
+  image: node:16 # Use a Node.js Docker image
+  script:
+    - npm install # Install dependencies
+  cache:
+    paths:
+      - node_modules/  # Cache node_modules to speed up future builds
+
+# Run tests (if you have tests in your project)
+test:
+  stage: test
+  image: node:16
+  script:
+    - npm run test # Run your test script (e.g., Jest or another testing framework)
+  cache:
+    paths:
+      - node_modules/
+
+# Build the Next.js project
+build:
+  stage: build
+  image: node:16
+  script:
+    - npm run build # This runs the `next build` command
+  artifacts:
+    paths:
+      - .next  # Store build artifacts for future jobs or deployments
+
+# Deploy to production (you can customize the deployment script)
+deploy:
+  stage: deploy
+  image: node:16
+  script:
+    - echo "Deploying to production..."
+    - npm run deploy  # You can define a custom deployment script here, like uploading to a server
+  when: manual  # You can trigger this manually if you don't want automatic deploys
+  only:
+    - master  # Ensure deployment only happens on the master branch
