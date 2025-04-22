@@ -960,6 +960,11 @@
       justify-content: space-between;
     }
   }
+  .md\:gap-12 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 12);
+    }
+  }
   .md\:text-left {
     @media (width >= 48rem) {
       text-align: left;
