@@ -42,10 +42,10 @@ export default function ContactPage() {
 
   return (
     <div className="container mx-auto px-6 py-12">
-      <div className="flex flex-col md:flex-row-reverse items-center md:items-start md:justify-between mb-12">
+      <div className="flex flex-col md:flex-row items-center md:items-start md:justify-between gap-8 md:gap-12 mb-12">
         {/* Contact Form Section */}
         <div
-          className="flex flex-col md:w-1/2 p-4 rounded-lg"
+          className="flex flex-col w-full md:w-1/2 p-4 rounded-lg"
           data-aos="fade-left"
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -107,7 +107,7 @@ export default function ContactPage() {
 
         {/* Contact Details Section */}
         <div
-          className="md:w-1/2 p-4 rounded-lg"
+          className="w-full md:w-1/2 p-4 rounded-lg"
           data-aos="fade-right"
         >
           <h3 className="text-2xl font-semibold text-gray-800 mb-3">
@@ -127,7 +127,7 @@ export default function ContactPage() {
           <div className="mt-4">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d883.3136971073252!2d85.33420164864785!3d27.67851903416822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1955facad343%3A0xcf9c6b90355326b1!2sThela%20Ghar!5e0!3m2!1sen!2snp!4v1745127395508!5m2!1sen!2snp"
-              width="400"
+              width="100%"
               height="300"
               style={{ border: 0 }}
               allowFullScreen
