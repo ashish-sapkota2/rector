@@ -1,0 +1,12 @@
+@import "tailwindcss";
+/* @plugin "daisyui"; */
+
+
+body{
+    font-family: 'Georgia';
+    color: #0056b3;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
