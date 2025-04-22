@@ -1,4 +1,13 @@
+"use client"
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function ServicesPage() {
+    useEffect(() => {
+        AOS.init({ duration: 1000 });
+    }, []);
+
     const services = [
         {
             title: "Product Design",
@@ -36,13 +45,24 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6 py-12">
             <h2 className="text-center text-3xl font-bold text-blue-600 mb-8">Our Services</h2>
             {services.map((service, index) => (
-                <div key={index} id={service.title.toLowerCase().replace(/\s+/g, "-")} className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center mb-12 gap-10`}>
+                <div
+                    key={index}
+                    id={service.title.toLowerCase().replace(/\s+/g, "-")}
+                    className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center mb-12 gap-10`}
+                >
                     <div className="md:w-1/2 p-4">
                         <h3 className="text-2xl font-semibold text-gray-800 mb-3">{service.title}</h3>
                         <p className="text-gray-600">{service.description}</p>
                     </div>
-                    <div className="md:w-1/2">
-                        <img src={service.image} alt={service.title} className="w-full h-100 object-cover rounded-lg shadow-md" />
+                    <div
+                        className="md:w-1/2"
+                        data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}
+                    >
+                        <img
+                            src={service.image}
+                            alt={service.title}
+                            className="w-full h-100 object-cover rounded-lg shadow-md"
+                        />
                     </div>
                 </div>
             ))}
