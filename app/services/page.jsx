@@ -52,7 +52,7 @@ export default function ServicesPage() {
                 >
                     <div className="md:w-1/2 p-4">
                         <h3 className="text-2xl font-semibold text-gray-800 mb-3">{service.title}</h3>
-                        <p className="text-gray-600">{service.description}</p>
+                        <p className="text-gray-600" style={{ textAlign: "justify" }}>{service.description}</p>
                     </div>
                     <div
                         className="md:w-1/2"

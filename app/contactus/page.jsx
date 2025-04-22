@@ -4,15 +4,17 @@ import { useRef, useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function ContactPage() {
   const form = useRef();
   const [currentTime, setCurrentTime] = useState("");
 
-  // Set the current time when the component is mounted
   useEffect(() => {
-    const now = new Date().toLocaleString();
-    setCurrentTime(now);
+    if (typeof window !== "undefined") {
+      AOS.init({ duration: 1000 });
+    }
   }, []);
 
   const sendEmail = (e) => {
@@ -42,7 +44,10 @@ export default function ContactPage() {
     <div className="container mx-auto px-6 py-12">
       <div className="flex flex-col md:flex-row-reverse items-center md:items-start md:justify-between mb-12">
         {/* Contact Form Section */}
-        <div className="flex flex-col md:w-1/2 p-4  rounded-lg ">
+        <div
+          className="flex flex-col md:w-1/2 p-4 rounded-lg"
+          data-aos="fade-left"
+        >
           <h3 className="text-2xl font-semibold text-gray-800 mb-4">
             Get in Touch
           </h3>
@@ -101,7 +106,10 @@ export default function ContactPage() {
         </div>
 
         {/* Contact Details Section */}
-        <div className="md:w-1/2 p-4 rounded-lg ">
+        <div
+          className="md:w-1/2 p-4 rounded-lg"
+          data-aos="fade-right"
+        >
           <h3 className="text-2xl font-semibold text-gray-800 mb-3">
             Our Office
           </h3>
@@ -125,6 +133,7 @@ export default function ContactPage() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              data-aos="zoom-in"
             />
           </div>
         </div>
