@@ -120,10 +120,7 @@ export default function Footer() {
       {/* Footer Bottom */}
       <div className="text-center py-4 mt-6 bg-gray-900 text-white">
         <p>
-          &copy; 2025 Rector Engineering Pvt. Ltd. -{" "}
-          <Link href="#" className="underline">
-            Privacy Policy
-          </Link>
+          &copy; 2025 Rector Engineering Pvt. Ltd.
         </p>
       </div>
     </footer>
