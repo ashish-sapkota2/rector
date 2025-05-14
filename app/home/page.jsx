@@ -65,7 +65,37 @@ export default function Page() {
       link: "/services#quality-assurance", // Example link
     },
   ];
+  const testimonials = [
+    {
+      name: "Anjali Sharma",
+      role: "Client - E-commerce Project",
+      comment:
+        "Their team transformed our online store with a beautiful design and smooth checkout experience. From the initial consultation to the final deployment, their communication and professionalism stood out. Sales have increased by 40% since the redesign. Highly recommend!",
+      date: "March 2025",
+    },
+    {
+      name: "Rahul Verma",
+      role: "Startup Founder",
+      comment:
+        "The team provided excellent UX/UI and developed our MVP in record time. Communication was clear and timely, and they even helped us refine our product strategy. Our investors were impressed with the functionality and design of the prototype. It was a game-changer for our early-stage launch.",
+      date: "February 2025",
+    },
+    {
+      name: "Sneha Joshi",
+      role: "Digital Marketing Partner",
+      comment:
+        "Loved collaborating with them! Their marketing insights helped double our engagement. They created content strategies, managed paid ads, and delivered detailed analytics reports. Their proactive attitude and creativity made them an essential extension of our team.",
+      date: "January 2025",
+    },
+  ];
+  const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % testimonials.length);
+    }, 5000); // change every 5 seconds
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div className="relative w-full min-h-screen bg-gradient-to-r from-[#2b007b] to-[#0065a8] pt-[60px] text-white overflow-hidden">
       {/* Hero Section */}
@@ -117,9 +147,8 @@ export default function Page() {
           </div>
         </div>
       </div>
-
       {/* Why Choose Us Section */}
-      <div className="bg-white py-16 px-6" data-aos="fade-up">
+      <div className="bg-gray-200 py-16 px-6" data-aos="fade-up">
         <div className="max-w-7xl mx-auto text-center">
           <h2
             className="text-3xl md:text-4xl font-semibold mb-6"
@@ -155,11 +184,36 @@ export default function Page() {
               with a team that’s invested in your success, a team that thrives
               on innovation, integrity, and long-term relationships.
             </p>
-            <p>Let’s build something remarkable—together.</p>
+            <p data-aos="fade-up">Let’s build something remarkable—together.</p>
           </div>
         </div>
       </div>
 
+      {/* Testimonials Carousel Section */}
+      <div className="bg-white py-20 px-4">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg text-black italic mb-8 transition-all duration-500 min-h-[100px]">
+            "{testimonials[current].comment}"
+          </p>
+          <h3 className="text-lg font-semibold text-[#0065a8]">
+            {testimonials[current].name}
+          </h3>
+          <p className="text-sm text-gray-500">{testimonials[current].role}</p>
+
+          {/* Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-6">
+            {testimonials.map((_, idx) => (
+              <span
+                key={idx}
+                onClick={() => setCurrent(idx)}
+                className={`w-3 h-3 rounded-full cursor-pointer transition-all duration-300 ${
+                  current === idx ? "bg-[#0065a8] w-6" : "bg-gray-300"
+                }`}
+              ></span>
+            ))}
+          </div>
+        </div>
+      </div>
       {/* Services Section */}
       <div className="bg-gray-200 py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -259,6 +313,57 @@ export default function Page() {
           </div>
         </div>
       </div>
+      {/* Stats Section */}
+      <div className="bg-gray-100 py-16 px-6" data-aos="fade-up">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2
+            className="text-3xl md:text-4xl font-semibold mb-12"
+            style={{ color: "#0065a8" }}
+          >
+            Our Achievements
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {/* Tasks Box */}
+            <div
+              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              data-aos="fade-up"
+            >
+              <h3 className="text-3xl font-semibold text-indigo-600">500+</h3>
+              <p className="text-lg text-gray-700">Tasks Completed</p>
+            </div>
+
+            {/* Projects Box */}
+            <div
+              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <h3 className="text-3xl font-semibold text-indigo-600">100+</h3>
+              <p className="text-lg text-gray-700">Projects Delivered</p>
+            </div>
+
+            {/* Clients Box */}
+            <div
+              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <h3 className="text-3xl font-semibold text-indigo-600">200+</h3>
+              <p className="text-lg text-gray-700">Happy Clients</p>
+            </div>
+
+            {/* Partners Box */}
+            <div
+              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <h3 className="text-3xl font-semibold text-indigo-600">50+</h3>
+              <p className="text-lg text-gray-700">Business Partners</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* FAQ Section */}
       <div className="bg-gray-100 py-16 px-6">
@@ -273,16 +378,36 @@ export default function Page() {
 
           {[
             {
-              q: "What services do you specialize in?",
-              a: "We specialize in web and app development, UX/UI design, digital marketing, and quality assurance.",
+              q: "What industries do you serve?",
+              a: "We cater to a wide range of industries including healthcare, education, e-commerce, finance, and real estate.",
             },
             {
-              q: "How long does it take to complete a project?",
-              a: "Timelines vary based on project complexity. On average, a basic project takes 4–6 weeks.",
+              q: "Can you work with existing websites or apps?",
+              a: "Absolutely! We can upgrade, redesign, or integrate new features into your current systems.",
             },
             {
-              q: "Do you offer post-launch support?",
-              a: "Yes, we provide ongoing maintenance, updates, and support packages tailored to your needs.",
+              q: "How do you ensure the quality of your projects?",
+              a: "We follow a structured QA process including automated and manual testing, regular code reviews, and client feedback loops.",
+            },
+            {
+              q: "What technologies do you use?",
+              a: "Our tech stack includes React, Next.js, Angular, Node.js, Python, Flutter, and more, depending on project requirements.",
+            },
+            {
+              q: "How do you handle communication and project management?",
+              a: "We use tools like Slack, Trello, and Jira to keep communication transparent and projects on track. Clients receive regular updates.",
+            },
+            {
+              q: "Do you provide custom design or use templates?",
+              a: "We offer both. Our designers can create fully custom designs or adapt templates to match your brand identity.",
+            },
+            {
+              q: "What is your pricing model?",
+              a: "We offer flexible pricing models including fixed-price, hourly, and milestone-based billing depending on the project's scope and duration.",
+            },
+            {
+              q: "Can you help with branding and content as well?",
+              a: "Yes, we offer brand strategy, logo design, content writing, and other creative services to support your digital presence.",
             },
           ].map((faq, index) => (
             <div
