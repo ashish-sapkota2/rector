@@ -149,42 +149,50 @@ export default function Page() {
       </div>
       {/* Why Choose Us Section */}
       <div className="bg-gray-200 py-16 px-6" data-aos="fade-up">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2
-            className="text-3xl md:text-4xl font-semibold mb-6"
-            style={{ color: "#0065a8" }}
-          >
-            Why Choose Us?
-          </h2>
-          <div className="text-base text-black md:text-lg lg:text-xl w-full mx-auto space-y-6">
-            <p
-              className="text-base text-black md:text-lg lg:text-xl w-full mx-auto"
-              style={{ textAlign: "justify" }}
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
+          {/* Text Section */}
+          <div className="lg:w-1/2">
+            <h2
+              className="text-3xl md:text-4xl font-semibold mb-6 text-center lg:text-left"
+              style={{ color: "#0065a8" }}
             >
-              At the heart of everything we do is a bold, passionate team of
-              innovators who believe in building things the right way—right from
-              scratch. We don’t just develop applications; we engineer robust,
-              scalable solutions designed to grow with your business and adapt
-              to an ever-evolving digital landscape. Our foundation is built on
-              deep technical expertise—ranging from crafting high-performance
-              enterprise systems to designing advanced, secure databases that
-              can handle complex business logic with ease. We blend creativity
-              with precision, ensuring that our solutions aren’t just
-              functional, but also future-proof and efficient. What truly sets
-              us apart is our commitment to craftsmanship and collaboration.
-              We're not here to just tick off requirements—we immerse ourselves
-              in your goals, challenges, and vision. Whether it's a startup
-              looking to launch an MVP or an enterprise in need of a digital
-              transformation, we approach each project with the same level of
-              care and dedication. We believe that quality isn't a checkbox—it's
-              a culture. Our process involves continuous iteration, testing, and
-              improvement to ensure every product we build exceeds expectations
-              in terms of performance, usability, and security. When you choose
-              us, you're not just hiring a service provider—you’re partnering
-              with a team that’s invested in your success, a team that thrives
-              on innovation, integrity, and long-term relationships.
-            </p>
-            <p data-aos="fade-up">Let’s build something remarkable—together.</p>
+              Why Choose Us?
+            </h2>
+            <div className="text-black space-y-6 text-justify text-base md:text-lg lg:text-xl">
+              <p>
+                At the heart of everything we do is a bold, passionate team of
+                innovators who believe in building things the right way—right
+                from scratch. We don’t just develop applications; we engineer
+                robust, scalable solutions designed to grow with your business
+                and adapt to an ever-evolving digital landscape.
+              </p>
+              <p>
+                Our foundation is built on deep technical expertise—ranging from
+                crafting high-performance enterprise systems to designing
+                advanced, secure databases that can handle complex business
+                logic with ease. We blend creativity with precision, ensuring
+                that our solutions aren’t just functional, but also future-proof
+                and efficient.
+              </p>
+              <p>
+                What truly sets us apart is our commitment to craftsmanship and
+                collaboration. We're not just ticking off requirements—we
+                immerse ourselves in your goals and vision. We believe quality
+                isn't a checkbox—it's a culture. When you choose us, you're
+                partnering with a team that’s invested in your success, driven
+                by innovation, integrity, and long-term relationships. Let’s
+                build something remarkable—together.
+              </p>
+            </div>
+          </div>
+
+          {/* Image Section */}
+          <div className="lg:w-1/2">
+            <img
+              src="/group.jpg" // Replace with your actual image path
+              alt="Why Choose Us"
+              className="w-full rounded-2xl shadow-lg"
+            />
           </div>
         </div>
       </div>
