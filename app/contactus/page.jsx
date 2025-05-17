@@ -48,7 +48,7 @@ export default function ContactPage() {
           className="flex flex-col w-full md:w-1/2 p-4 rounded-lg"
           data-aos="fade-left"
         >
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+          <h3 className="text-2xl font-semibold text-blue-600 mb-4 ">
             Get in Touch
           </h3>
 
@@ -110,7 +110,7 @@ export default function ContactPage() {
           className="w-full md:w-1/2 p-4 rounded-lg"
           data-aos="fade-right"
         >
-          <h3 className="text-2xl font-semibold text-gray-800 mb-3">
+          <h3 className="text-2xl font-semibold text-blue-600 mb-3">
             Our Office
           </h3>
           <p className="text-gray-600">
