@@ -5,7 +5,7 @@ export default function Page() {
     <div className="bg-gray-100 py-16 px-6">
       {/* Intro Section */}
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#004c80]">
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0065a8]">
           Join Our Team
         </h2>
         <p className="text-lg text-gray-700 mb-12">
@@ -23,7 +23,7 @@ export default function Page() {
           className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
           data-aos="fade-up"
         >
-          <h3 className="text-xl font-semibold text-[#004c80] mb-2">
+          <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
             Software Developer
           </h3>
           <p className="text-gray-700 mb-4">
@@ -49,7 +49,7 @@ export default function Page() {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          <h3 className="text-xl font-semibold text-[#004c80] mb-2">
+          <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
             UI/UX Designer
           </h3>
           <p className="text-gray-700 mb-4">
@@ -99,7 +99,7 @@ export default function Page() {
       {/* How to Apply Section */}
       <div className="bg-white py-16 px-6 mt-16">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#004c80]">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0065a8]">
             How to Apply
           </h2>
           <p className="text-lg text-gray-700 mb-8">
@@ -127,7 +127,7 @@ export default function Page() {
       {/* Employee Benefits Section */}
       <div className="bg-gray-200 py-16 px-6 mt-16">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#004c80]">
+          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0065a8]">
             Employee Benefits
           </h2>
           <p className="text-lg text-gray-700 mb-12">
@@ -137,7 +137,7 @@ export default function Page() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Health Insurance */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-[#004c80] mb-2">
+              <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
                 Health Insurance
               </h3>
               <p className="text-gray-700">
@@ -148,7 +148,7 @@ export default function Page() {
 
             {/* Flexible Hours */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-[#004c80] mb-2">
+              <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
                 Flexible Hours
               </h3>
               <p className="text-gray-700">
@@ -159,7 +159,7 @@ export default function Page() {
 
             {/* Learning Opportunities */}
             <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-[#004c80] mb-2">
+              <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
                 Learning Opportunities
               </h3>
               <p className="text-gray-700">
