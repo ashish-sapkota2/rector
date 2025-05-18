@@ -30,9 +30,7 @@ export default function Header() {
               <Link
                 href={link.href}
                 className={`text-lg font-semibold ${
-                  pathname === link.href
-                    ? "text-blue-600 underline underline-offset-8"
-                    : "text-gray-800 hover:text-blue-600"
+                  pathname === link.href ? "text-blue-600" : "text-gray-800"
                 }`}
               >
                 {link.label}

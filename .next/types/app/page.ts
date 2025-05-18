@@ -1,4 +1,4 @@
-// File: C:\Users\USER\Desktop\RectorEng Website\app\page.jsx
+// File: E:\rector-main\app\page.jsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
