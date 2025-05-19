@@ -125,7 +125,7 @@ export default function Page() {
           <div className="flex items-center gap-6 mt-6 flex-wrap">
             <Link
               href="/contactus"
-              className="text-white font-semibold px-6 py-3 border border-blue-600 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300"
+              className="text-white font-semibold px-6 py-3 rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-blue-700 hover:shadow-lg hover:-translate-y-1 cursor-pointer"
             >
               Let's Talk →
             </Link>

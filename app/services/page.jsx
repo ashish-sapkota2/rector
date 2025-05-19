@@ -43,7 +43,7 @@ export default function ServicesPage() {
 
     return (
         <div className="container mx-auto px-6 py-12">
-            <h2 className="text-center text-3xl font-bold text-blue-600 mb-8">Our Services</h2>
+            <h2 className="text-center text-3xl font-bold text-blue-600 mb-8"data-aos="fade-up">Our Services</h2>
             {services.map((service, index) => (
                 <div
                     key={index}

@@ -45,6 +45,27 @@ const jobDetails = {
       "Strong problem-solving and collaboration skills.",
     ],
   },
+  "uiux-design-intern": {
+    title: "UI/UX Design Intern",
+    description:
+      "Contribute to designing intuitive, user-centered interfaces and improving user experiences across web and mobile platforms in a collaborative and fast-paced environment.",
+    responsibilities: [
+      "Assist in designing wireframes, mockups, and interactive prototypes using tools like Figma or Adobe XD.",
+      "Collaborate with developers to ensure design feasibility and implementation accuracy.",
+      "Conduct user research and usability testing to gather insights and feedback.",
+      "Help maintain and evolve design systems and UI components.",
+      "Participate in design reviews and brainstorming sessions.",
+      "Support in creating user flows, personas, and journey maps.",
+    ],
+    requirements: [
+      "Basic knowledge of UI/UX principles and design tools (e.g., Figma, Adobe XD, Sketch).",
+      "Understanding of user-centered design processes.",
+      "Familiarity with web/mobile design patterns and responsive design.",
+      "Strong attention to detail and a creative mindset.",
+      "Ability to effectively communicate design ideas and concepts.",
+      "Willingness to learn and adapt in a fast-paced team environment.",
+    ],
+  },
 };
 
 export default function JobDetailPage() {

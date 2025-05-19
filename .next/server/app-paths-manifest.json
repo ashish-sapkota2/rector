@@ -1,7 +1,8 @@
 {
   "/career/page": "app/career/page.js",
-  "/services/page": "app/services/page.js",
-  "/aboutus/page": "app/aboutus/page.js",
+  "/career/[slug]/page": "app/career/[slug]/page.js",
   "/home/page": "app/home/page.js",
-  "/career/[slug]/page": "app/career/[slug]/page.js"
+  "/aboutus/page": "app/aboutus/page.js",
+  "/services/page": "app/services/page.js",
+  "/contactus/page": "app/contactus/page.js"
 }

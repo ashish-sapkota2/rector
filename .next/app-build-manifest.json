@@ -6,22 +6,21 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
+    "/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/page.css",
+      "static/chunks/app/page.js"
+    ],
     "/career/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/career/page.js"
     ],
-    "/services/page": [
+    "/career/[slug]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/services/page.css",
-      "static/chunks/app/services/page.js"
-    ],
-    "/aboutus/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/aboutus/page.css",
-      "static/chunks/app/aboutus/page.js"
+      "static/chunks/app/career/[slug]/page.js"
     ],
     "/home/page": [
       "static/chunks/webpack.js",
@@ -29,10 +28,23 @@
       "static/css/app/home/page.css",
       "static/chunks/app/home/page.js"
     ],
-    "/career/[slug]/page": [
+    "/aboutus/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/career/[slug]/page.js"
+      "static/css/app/aboutus/page.css",
+      "static/chunks/app/aboutus/page.js"
+    ],
+    "/services/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/services/page.css",
+      "static/chunks/app/services/page.js"
+    ],
+    "/contactus/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/contactus/page.css",
+      "static/chunks/app/contactus/page.js"
     ]
   }
 }

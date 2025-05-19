@@ -61,7 +61,10 @@ export default function Footer() {
           <h4 className="font-bold text-lg mb-4 mt-4">Services</h4>
           <ul className="space-y-2">
             <li>
-              <Link href="/services#product-design" className="hover:text-gray-200">
+              <Link
+                href="/services#product-design"
+                className="hover:text-gray-200"
+              >
                 Product Design
               </Link>
             </li>
@@ -71,22 +74,34 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/services#web-development" className="hover:text-gray-200">
+              <Link
+                href="/services#web-development"
+                className="hover:text-gray-200"
+              >
                 Web Development
               </Link>
             </li>
             <li>
-              <Link href="/services#digital-marketing" className="hover:text-gray-200">
+              <Link
+                href="/services#digital-marketing"
+                className="hover:text-gray-200"
+              >
                 Digital Marketing
               </Link>
             </li>
             <li>
-              <Link href="/services#app-development" className="hover:text-gray-200">
+              <Link
+                href="/services#app-development"
+                className="hover:text-gray-200"
+              >
                 App Development
               </Link>
             </li>
             <li>
-              <Link href="/services#quality-assurance" className="hover:text-gray-200">
+              <Link
+                href="/services#quality-assurance"
+                className="hover:text-gray-200"
+              >
                 Quality Assurance
               </Link>
             </li>
@@ -97,7 +112,7 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-lg mb-4 mt-4">Ready to get started?</h4>
           <Link href="/contactus">
-            <button className="bg-white text-blue-700 font-semibold px-6 py-2 rounded-full shadow-lg hover:bg-blue-600 hover:text-white transition-all hover:cursor-pointer">
+            <button className="bg-transparent text-white font-semibold px-6 py-2 rounded-full border border-white transition-all duration-300 hover:bg-white hover:text-blue-700 hover:shadow-xl hover:-translate-y-1 cursor-pointer">
               Innovate With Us →
             </button>
           </Link>

@@ -29,11 +29,19 @@ export default function Header() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`text-lg font-semibold ${
-                  pathname === link.href ? "text-blue-600" : "text-gray-800"
+                className={`relative text-lg font-semibold pb-1 ${
+                  pathname === link.href
+                    ? "text-blue-600"
+                    : "text-gray-800 hover:text-blue-600"
                 }`}
               >
                 {link.label}
+                {/* underline span */}
+                <span
+                  className={`absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-[width] duration-300 ease-in-out ${
+                    pathname === link.href ? "w-full" : "hover:w-full"
+                  }`}
+                />
               </Link>
             </li>
           ))}
@@ -42,7 +50,7 @@ export default function Header() {
         {/* Contact Us Button */}
         <Link
           href="/contactus"
-          className="hidden md:block bg-blue-600 text-white font-bold text-lg px-6 py-3 rounded-full shadow-lg transition-all duration-300 hover:bg-white hover:text-blue-600 hover:shadow-lg"
+          className="hidden md:block bg-blue-600 text-white font-bold text-lg px-6 py-3 rounded-full shadow-md transition-all duration-300 hover:bg-white hover:text-blue-600 hover:border hover:border-blue-600 hover:shadow-xl hover:-translate-y-1"
         >
           INNOVATE WITH US →
         </Link>

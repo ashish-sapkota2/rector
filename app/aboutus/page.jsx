@@ -74,7 +74,7 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen pt-[60px]">
       {/* About Us Section */}
-      <h2 className="text-center text-3xl font-bold text-blue-600 mb-8">
+      <h2 className="text-center text-3xl font-bold text-blue-600 mb-8" data-aos="fade-up">
         About Us
       </h2>
 
