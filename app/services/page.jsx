@@ -51,7 +51,7 @@ export default function ServicesPage() {
                     className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''} items-center mb-12 gap-10`}
                 >
                     <div className="md:w-1/2 p-4">
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-3">{service.title}</h3>
+                        <h3 className="text-2xl font-semibold text-blue-600 mb-3">{service.title}</h3>
                         <p className="text-gray-600" style={{ textAlign: "justify" }}>{service.description}</p>
                     </div>
                     <div

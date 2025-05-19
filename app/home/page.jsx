@@ -120,7 +120,8 @@ export default function Page() {
             .
           </h1>
           <p className="text-lg">
-            At RectorEng Pvt. Ltd., we turn your ideas into reality          </p>
+            At RectorEng Pvt. Ltd., we turn your ideas into reality{" "}
+          </p>
           <div className="flex items-center gap-6 mt-6 flex-wrap">
             <Link
               href="/contactus"
@@ -157,34 +158,34 @@ export default function Page() {
           </h2>
 
           {/* Content Section */}
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-20">
             {/* Text Section */}
             <div className="lg:w-1/2" data-aos="fade-right">
-              <div className="text-black space-y-6 text-justify text-sm md:text-base lg:text-lg">
+              <div className="text-gray-700 space-y-6 text-justify text-sm md:text-base lg:text-lg">
                 <p>
-                  At the heart of everything we do is a bold, passionate team of
+                  At RectorEng Pvt. Ltd., we’re powered by a passionate team of
                   innovators who believe in building things the right way—right
-                  from scratch. We don’t just develop applications; we engineer
-                  robust, scalable solutions designed to grow with your business
-                  and adapt to an ever-evolving digital landscape.
+                  from scratch.
                 </p>
                 <p>
-                  Our foundation is built on deep technical expertise—ranging
-                  from crafting high-performance enterprise systems to designing
-                  advanced, secure databases that can handle complex business
-                  logic with ease. We blend creativity with precision, ensuring
-                  that our solutions aren’t just functional, but also
-                  future-proof and efficient.
+                  We don’t just develop applications—we engineer scalable,
+                  future-ready solutions tailored to grow with your business and
+                  adapt to the digital world.
                 </p>
                 <p>
-                  What truly sets us apart is our commitment to craftsmanship
-                  and collaboration. We're not just ticking off requirements—we
-                  immerse ourselves in your goals and vision. We believe quality
-                  isn't a checkbox—it's a culture. When you choose us, you're
-                  partnering with a team that’s invested in your success, driven
-                  by innovation, integrity, and long-term relationships. Let’s
-                  build something remarkable—together.
+                  With deep technical expertise and a focus on quality
+                  craftsmanship, we blend creativity and precision to deliver
+                  systems that are robust, secure, and efficient.
                 </p>
+
+                <p>
+                  What sets us apart is our collaborative spirit. We align
+                  closely with your goals, treating quality as a culture, not
+                  just a checklist. When you work with us, you gain a dedicated
+                  partner driven by innovation, integrity, and long-term
+                  success.
+                </p>
+                <p>Let’s build something remarkable—together.</p>
               </div>
             </div>
 
@@ -231,7 +232,7 @@ export default function Page() {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6">
             How We Work
           </h2>
-          <p className="text-black text-lg md:text-xl mb-12">
+          <p className="text-gray-700 text-lg md:text-xl mb-12">
             We bring your ideas to life using the right tools, technology, and
             platform to meet your needs. We put our partners at the forefront
             and work collaboratively to meet their strategic goals,
@@ -286,14 +287,20 @@ export default function Page() {
             ].map((step, idx) => (
               <div
                 key={idx}
-                className="relative bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition duration-300 text-center"
+                className="group bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition duration-300 text-center hover:bg-blue-600"
               >
-                <div className="text-4xl mb-3">{step.icon}</div>
-                <div className="text-xl font-semibold text-blue-600 mb-1">
+                <div className="text-4xl mb-3 transition duration-300 group-hover:text-white">
+                  {step.icon}
+                </div>
+                <div className="text-xl font-semibold text-blue-600 mb-1 transition duration-300 group-hover:text-white">
                   {step.number}
                 </div>
-                <h3 className="font-bold text-blue-600 mb-2">{step.title}</h3>
-                <p className="text-black text-sm">{step.description}</p>
+                <h3 className="font-bold text-blue-600 mb-2 transition duration-300 group-hover:text-white">
+                  {step.title}
+                </h3>
+                <p className="text-gray-700 text-sm transition duration-300 group-hover:text-white">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
@@ -392,7 +399,7 @@ export default function Page() {
                   <h3 className="text-xl font-semibold mb-2 text-[#0065a8]">
                     {project.title}
                   </h3>
-                  <p className="text-black text-sm">{project.desc}</p>
+                  <p className="text-gray-700 text-sm">{project.desc}</p>
                 </div>
               </div>
             ))}

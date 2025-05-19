@@ -74,10 +74,13 @@ export default function Page() {
   return (
     <div className="relative w-full min-h-screen pt-[60px]">
       {/* About Us Section */}
+      <h2 className="text-center text-3xl font-bold text-blue-600 mb-8">
+        About Us
+      </h2>
+
       <div className="bg-white py-16 px-6 flex items-center" data-aos="fade-up">
         {/* Text Section */}
         <div className="flex-1 text-center md:text-left">
-          <h2 className="text-4xl font-semibold mb-6">About Us</h2>
           <p
             className="text-lg text-gray-700 max-w-3xl mx-auto mb-4 pr-8 "
             style={{ textAlign: "justify" }}
@@ -101,7 +104,6 @@ export default function Page() {
           <p
             className="text-lg text-gray-700 max-w-3xl mx-auto mb-4 pr-8"
             style={{ textAlign: "justify" }}
-            data-aos="fade-up"
           >
             As a new and ambitious company, we take pride in proving ourselves
             by delivering outstanding results. Our goal is to be your trusted

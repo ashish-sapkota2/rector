@@ -2,174 +2,144 @@ import React from "react";
 
 export default function Page() {
   return (
-    <div className="bg-gray-100 py-16 px-6">
-      {/* Intro Section */}
-      <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0065a8]">
-          Join Our Team
+    <div className="relative w-full min-h-screen pt-[20px] bg-gray-50">
+      {/* Career Introduction */}
+      <section
+        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center"
+        data-aos="fade-up"
+      >
+        <h2 className="text-4xl font-bold mb-6 text-blue-600">
+          Careers at RectorEng
         </h2>
-        <p className="text-lg text-gray-700 mb-12">
-          At RectorEng, we’re always on the lookout for talented and
-          driven individuals who share our passion for innovation, teamwork, and
-          delivering excellence. Explore our open positions below and become part
-          of a company that values growth, creativity, and collaboration.
+        <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-6">
+          At RectorEng, we know that our people are the foundation of everything
+          we build. We’re creating a workplace where innovation thrives,
+          collaboration is second nature, and diversity drives success.
         </p>
-      </div>
-
-      {/* Job Listings Section */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Job Card 1 */}
-        <div
-          className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
-          data-aos="fade-up"
+        <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-10">
+          Ready to shape the future with a passionate, forward-thinking team?
+          Start your journey at RectorEng today.
+        </p>
+        <a
+          href="#open-positions"
+          className="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-600 transition duration-300"
         >
-          <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
-            Software Developer
+          Explore Open Roles
+        </a>
+      </section>
+
+      {/* Life at RectorEng */}
+      <section
+        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid gap-8 md:grid-cols-2"
+        data-aos="fade-up"
+      >
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+          <h3 className="text-xl font-semibold text-blue-600 mb-2">
+            Driven by Innovation
           </h3>
-          <p className="text-gray-700 mb-4">
-            We’re looking for an experienced Software Developer to join our team
-            and build high-quality applications.
-          </p>
-          <p className="font-medium text-gray-800">Location: Remote</p>
-          <p className="font-medium text-gray-800">Experience: 2+ years</p>
-          <p className="mt-4 text-[#0065a8] font-semibold">
-            Send your CV to <br />
-            <a
-              href="mailto:contact.rectoreng@gmail.com"
-              className="hover:text-[#004c80] underline"
-            >
-              contact.rectoreng@gmail.com
-            </a>
+          <p className="text-gray-700">
+            We’re committed to pushing boundaries, encouraging new ideas, and
+            driving progress through technology.
           </p>
         </div>
-
-        {/* Job Card 2 */}
-        <div
-          className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
-            UI/UX Designer
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+          <h3 className="text-xl font-semibold text-blue-600 mb-2">
+            Team First Culture
           </h3>
-          <p className="text-gray-700 mb-4">
-            We are seeking a creative UI/UX Designer to design user-friendly
-            interfaces and experiences for our applications.
-          </p>
-          <p className="font-medium text-gray-800">Location: New York</p>
-          <p className="font-medium text-gray-800">Experience: 3+ years</p>
-          <p className="mt-4 text-[#0065a8] font-semibold">
-            Send your CV to <br />
-            <a
-              href="mailto:contact.rectoreng@gmail.com"
-              className="hover:text-[#004c80] underline"
-            >
-              contact.rectoreng@gmail.com
-            </a>
+          <p className="text-gray-700">
+            Collaboration is at our core. Learn, grow, and succeed alongside a
+            supportive and talented team.
           </p>
         </div>
-
-        {/* Job Card 3 */}
-        <div
-          className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <h3 className="text-xl font-semibold text-[#004c80] mb-2">
-            Marketing Manager
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+          <h3 className="text-xl font-semibold text-blue-600 mb-2">
+            Endless Learning
           </h3>
-          <p className="text-gray-700 mb-4">
-            Looking for a Marketing Manager who can help us grow our brand and
-            expand our market reach.
-          </p>
-          <p className="font-medium text-gray-800">Location: Remote</p>
-          <p className="font-medium text-gray-800">Experience: 5+ years</p>
-          <p className="mt-4 text-[#0065a8] font-semibold">
-            Send your CV to <br />
-            <a
-              href="mailto:contact.rectoreng@gmail.com"
-              className="hover:text-[#004c80] underline"
-            >
-              contact.rectoreng@gmail.com
-            </a>
+          <p className="text-gray-700">
+            Advance your career with access to ongoing training, mentorship
+            programs, and leadership development.
           </p>
         </div>
-      </div>
-
-      {/* How to Apply Section */}
-      <div className="bg-white py-16 px-6 mt-16">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0065a8]">
-            How to Apply
-          </h2>
-          <p className="text-lg text-gray-700 mb-8">
-            Applying for a position at RectorEng is simple. Follow
-            the steps below to submit your application:
-          </p>
-          <ol className="text-lg text-left text-gray-700 list-decimal pl-6">
-            <li>Choose a job role that fits your skills and experience.</li>
-            <li>Send your CV and portfolio (if applicable) to the email below.</li>
-            <li>Our HR team will review your application and respond within 7 business days.</li>
-            <li>If shortlisted, we will schedule an interview with you.</li>
-          </ol>
-          <p className="mt-6 text-[#0065a8] text-lg font-semibold">
-            Email:{" "}
-            <a
-              href="mailto:contact.rectoreng@gmail.com"
-              className="hover:text-[#004c80] underline"
-            >
-              contact.rectoreng@gmail.com
-            </a>
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+          <h3 className="text-xl font-semibold text-blue-600 mb-2">
+            Purposeful Work
+          </h3>
+          <p className="text-gray-700">
+            Be part of something bigger. Build solutions that create real-world
+            impact for our clients and communities.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* Employee Benefits Section */}
-      <div className="bg-gray-200 py-16 px-6 mt-16">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-[#0065a8]">
-            Employee Benefits
-          </h2>
-          <p className="text-lg text-gray-700 mb-12">
-            At RectorEng, we value our employees and offer a
-            comprehensive benefits package that includes:
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Health Insurance */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
-                Health Insurance
-              </h3>
+      {/* How We Hire in a Box */}
+      <section
+        className="bg-white py-16 px-4 sm:px-6 lg:px-8"
+        data-aos="fade-up"
+      >
+        <div className="max-w-6xl mx-auto bg-gray-100 rounded-2xl p-10 shadow-lg hover:shadow-xl transition duration-300">
+          <h3 className="text-3xl font-bold text-center mb-12 text-blue-600">
+            How We Hire
+          </h3>
+          <div className="grid gap-10 md:grid-cols-3 text-center">
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+              <h4 className="text-xl font-bold text-blue-600 mb-2">
+                1. Submit
+              </h4>
               <p className="text-gray-700">
-                We provide comprehensive health insurance to ensure your
-                well-being.
+                Apply online with your resume and cover letter. Tell us why
+                you’re a great fit.
               </p>
             </div>
-
-            {/* Flexible Hours */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
-                Flexible Hours
-              </h3>
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+              <h4 className="text-xl font-bold text-blue-600 mb-2">
+                2. Interview
+              </h4>
               <p className="text-gray-700">
-                Work-life balance is important, so we offer flexible working
-                hours.
+                Our team will connect with you for meaningful conversations and
+                skill assessments.
               </p>
             </div>
-
-            {/* Learning Opportunities */}
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold text-[#0065a8] mb-2">
-                Learning Opportunities
-              </h3>
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300">
+              <h4 className="text-xl font-bold text-blue-600 mb-2">
+                3. Join Us
+              </h4>
               <p className="text-gray-700">
-                We encourage continuous learning with access to courses and
-                training programs.
+                Receive an offer and start making an impact from day one at
+                RectorEng.
               </p>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+
+      {/* Open Positions */}
+      <section
+        id="open-positions"
+        className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16"
+        data-aos="fade-up"
+      >
+        <h3 className="text-3xl font-bold text-blue-600 text-center mb-10">
+          Open Positions
+        </h3>
+        <div className="space-y-6">
+          <div className="bg-white p-6 rounded-xl shadow-md flex flex-col sm:flex-row justify-between items-start sm:items-center hover:shadow-lg transition duration-300">
+            <h4 className="text-lg font-semibold text-gray-800">
+              Front End Developer Intern
+            </h4>
+            <a href="/career/frontend-developer-intern" className="text-blue-600 mt-2 sm:mt-0 hover:underline">
+              View details
+            </a>
+          </div>
+          <div className="bg-white p-6 rounded-xl shadow-md flex flex-col sm:flex-row justify-between items-start sm:items-center hover:shadow-lg transition duration-300">
+            <h4 className="text-lg font-semibold text-gray-800">
+              .NET Developer Intern
+            </h4>
+            <a href="/career/dotnet-developer-intern" className="text-blue-600 mt-2 sm:mt-0 hover:underline">
+              View details
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
