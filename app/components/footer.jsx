@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 py-12">
         {/* Logo & Contact Info */}
         <div>
-          <img src="/logo4.png" alt="Company Logo" className="w-32 mb-4" />
+          <img src="/logoneww.png" alt="Company Logo" className="w-40 mb-5" />
           <p className="font-semibold">Shankhamul, Kathmandu</p>
           <p className="flex items-center mt-2">
             <FaPhone size={20} className="mr-2" /> (+977) 9804750584
@@ -106,7 +106,7 @@ export default function Footer() {
 
       {/* Footer Bottom */}
       <div className="text-center py-4 mt-6 bg-gray-900 text-white">
-        <p>&copy; 2025 Rector Engineering Pvt. Ltd.</p>
+        <p>&copy; 2025 RectorEng Pvt. Ltd.</p>
       </div>
     </footer>
   );

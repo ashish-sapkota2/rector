@@ -120,10 +120,7 @@ export default function Page() {
             .
           </h1>
           <p className="text-lg">
-            From concept to code, we help you transform ideas into powerful
-            digital products that drive real growth and lasting impact.
-          </p>
-
+            At RectorEng Pvt. Ltd., we turn your ideas into reality          </p>
           <div className="flex items-center gap-6 mt-6 flex-wrap">
             <Link
               href="/contactus"
@@ -148,51 +145,57 @@ export default function Page() {
         </div>
       </div>
       {/* Why Choose Us Section */}
-      <div className="bg-gray-200 py-16 px-6" data-aos="fade-up">
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
-          {/* Text Section */}
-          <div className="lg:w-1/2">
-            <h2
-              className="text-3xl md:text-4xl font-semibold mb-6 text-center lg:text-left"
-              style={{ color: "#0065a8" }}
-            >
-              Why Choose Us?
-            </h2>
-            <div className="text-black space-y-6 text-justify text-base md:text-lg lg:text-xl">
-              <p>
-                At the heart of everything we do is a bold, passionate team of
-                innovators who believe in building things the right way—right
-                from scratch. We don’t just develop applications; we engineer
-                robust, scalable solutions designed to grow with your business
-                and adapt to an ever-evolving digital landscape.
-              </p>
-              <p>
-                Our foundation is built on deep technical expertise—ranging from
-                crafting high-performance enterprise systems to designing
-                advanced, secure databases that can handle complex business
-                logic with ease. We blend creativity with precision, ensuring
-                that our solutions aren’t just functional, but also future-proof
-                and efficient.
-              </p>
-              <p>
-                What truly sets us apart is our commitment to craftsmanship and
-                collaboration. We're not just ticking off requirements—we
-                immerse ourselves in your goals and vision. We believe quality
-                isn't a checkbox—it's a culture. When you choose us, you're
-                partnering with a team that’s invested in your success, driven
-                by innovation, integrity, and long-term relationships. Let’s
-                build something remarkable—together.
-              </p>
-            </div>
-          </div>
+      <div className="bg-gray-200 py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          {/* Centered Heading */}
+          <h2
+            className="text-3xl md:text-4xl font-semibold mb-12 text-center"
+            style={{ color: "#0065a8" }}
+            data-aos="fade-down"
+          >
+            Why Choose Us?
+          </h2>
 
-          {/* Image Section */}
-          <div className="lg:w-1/2">
-            <img
-              src="/group.jpg" // Replace with your actual image path
-              alt="Why Choose Us"
-              className="w-full rounded-2xl shadow-lg"
-            />
+          {/* Content Section */}
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Text Section */}
+            <div className="lg:w-1/2" data-aos="fade-right">
+              <div className="text-black space-y-6 text-justify text-sm md:text-base lg:text-lg">
+                <p>
+                  At the heart of everything we do is a bold, passionate team of
+                  innovators who believe in building things the right way—right
+                  from scratch. We don’t just develop applications; we engineer
+                  robust, scalable solutions designed to grow with your business
+                  and adapt to an ever-evolving digital landscape.
+                </p>
+                <p>
+                  Our foundation is built on deep technical expertise—ranging
+                  from crafting high-performance enterprise systems to designing
+                  advanced, secure databases that can handle complex business
+                  logic with ease. We blend creativity with precision, ensuring
+                  that our solutions aren’t just functional, but also
+                  future-proof and efficient.
+                </p>
+                <p>
+                  What truly sets us apart is our commitment to craftsmanship
+                  and collaboration. We're not just ticking off requirements—we
+                  immerse ourselves in your goals and vision. We believe quality
+                  isn't a checkbox—it's a culture. When you choose us, you're
+                  partnering with a team that’s invested in your success, driven
+                  by innovation, integrity, and long-term relationships. Let’s
+                  build something remarkable—together.
+                </p>
+              </div>
+            </div>
+
+            {/* Image Section */}
+            <div className="lg:w-1/2" data-aos="fade-left">
+              <img
+                src="/group.jpg" // Replace with your actual image path
+                alt="Why Choose Us"
+                className="w-full rounded-2xl shadow-lg"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -222,8 +225,83 @@ export default function Page() {
           </div>
         </div>
       </div>
+      {/* How we work section*/}
+      <section className="bg-gray-200 py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-6">
+            How We Work
+          </h2>
+          <p className="text-black text-lg md:text-xl mb-12">
+            We bring your ideas to life using the right tools, technology, and
+            platform to meet your needs. We put our partners at the forefront
+            and work collaboratively to meet their strategic goals,
+            administrative requirements, resource constraints, and technological
+            needs.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8">
+            {[
+              {
+                title: "VISION",
+                number: "1",
+                icon: "💡",
+                description:
+                  "Step one is ensuring that we understand the full extent and details of your vision.",
+              },
+              {
+                title: "PLAN",
+                number: "2",
+                icon: "👥",
+                description:
+                  "We create the architecture, pick the right tools for the job, and build the roadmap for you.",
+              },
+              {
+                title: "DESIGN",
+                number: "3",
+                icon: "🖊️",
+                description:
+                  "Based on your ideas, we create wireframes, mockups, and final designs.",
+              },
+              {
+                title: "DEVELOP",
+                number: "4",
+                icon: "💻",
+                description:
+                  "Based on approved designs, we start working towards development.",
+              },
+              {
+                title: "FEEDBACK",
+                number: "5",
+                icon: "🔍",
+                description:
+                  "We ensure the team is on track by presenting you with an early set of prototypes to analyze.",
+              },
+              {
+                title: "DEPLOY",
+                number: "6",
+                icon: "🚀",
+                description:
+                  "An automated deployment process ensures timely delivery with follow-up maintenance.",
+              },
+            ].map((step, idx) => (
+              <div
+                key={idx}
+                className="relative bg-gray-50 p-6 rounded-xl shadow hover:shadow-md transition duration-300 text-center"
+              >
+                <div className="text-4xl mb-3">{step.icon}</div>
+                <div className="text-xl font-semibold text-blue-600 mb-1">
+                  {step.number}
+                </div>
+                <h3 className="font-bold text-blue-600 mb-2">{step.title}</h3>
+                <p className="text-black text-sm">{step.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
-      <div className="bg-gray-200 py-16 px-6">
+      <div className="bg-white py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2
             className="text-3xl md:text-4xl font-semibold mb-12"
@@ -237,7 +315,7 @@ export default function Page() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="bg-white h-auto p-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:translate-y-1 hover:bg-[#0056b3] hover:text-white group flex flex-col items-center justify-between"
+                className="bg-gray-200 h-auto p-6 rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105 hover:translate-y-1 hover:bg-[#0056b3] hover:text-white group flex flex-col items-center justify-between"
                 data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
               >
                 {/* Icon at top center */}
@@ -246,7 +324,7 @@ export default function Page() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-medium mb-2 group-hover:text-white">
+                <h3 className="text-gray-200 text-lg font-medium mb-2 group-hover:text-white">
                   {service.title}
                 </h3>
 
@@ -270,7 +348,7 @@ export default function Page() {
         </div>
       </div>
       {/* Portfolio Section */}
-      <div className="bg-white py-16 px-6">
+      <div className="bg-gray-200 py-16 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h2
             className="text-3xl md:text-4xl font-semibold mb-12"
@@ -280,7 +358,7 @@ export default function Page() {
             Our Portfolio
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 image: "/c2.jpg",
@@ -314,7 +392,7 @@ export default function Page() {
                   <h3 className="text-xl font-semibold mb-2 text-[#0065a8]">
                     {project.title}
                   </h3>
-                  <p className="text-gray-600 text-sm">{project.desc}</p>
+                  <p className="text-black text-sm">{project.desc}</p>
                 </div>
               </div>
             ))}
@@ -322,51 +400,63 @@ export default function Page() {
         </div>
       </div>
       {/* Stats Section */}
-      <div className="bg-gray-100 py-16 px-6" data-aos="fade-up">
+      <div
+        className="bg-white py-16 px-6"
+        data-aos="fade"
+        data-aos-duration="800"
+        data-aos-easing="ease-out-cubic"
+      >
         <div className="max-w-7xl mx-auto text-center">
           <h2
             className="text-3xl md:text-4xl font-semibold mb-12"
             style={{ color: "#0065a8" }}
+            data-aos="fade-up"
+            data-aos-duration="800"
           >
             Our Achievements
           </h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Tasks Box */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-gray-200 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
               data-aos="fade-up"
+              data-aos-duration="800"
             >
-              <h3 className="text-3xl font-semibold text-indigo-600">500+</h3>
+              <h3 className="text-3xl font-semibold text-indigo-600">5+</h3>
               <p className="text-lg text-gray-700">Tasks Completed</p>
             </div>
 
             {/* Projects Box */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-gray-200 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
               data-aos="fade-up"
               data-aos-delay="100"
+              data-aos-duration="800"
             >
-              <h3 className="text-3xl font-semibold text-indigo-600">100+</h3>
+              <h3 className="text-3xl font-semibold text-indigo-600">5+</h3>
               <p className="text-lg text-gray-700">Projects Delivered</p>
             </div>
 
             {/* Clients Box */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-gray-200 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
               data-aos="fade-up"
               data-aos-delay="200"
+              data-aos-duration="800"
             >
-              <h3 className="text-3xl font-semibold text-indigo-600">200+</h3>
+              <h3 className="text-3xl font-semibold text-indigo-600">5+</h3>
               <p className="text-lg text-gray-700">Happy Clients</p>
             </div>
 
             {/* Partners Box */}
             <div
-              className="bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
+              className="bg-gray-200 p-8 rounded-lg shadow-lg transform hover:scale-105 transition duration-300"
               data-aos="fade-up"
               data-aos-delay="300"
+              data-aos-duration="800"
             >
-              <h3 className="text-3xl font-semibold text-indigo-600">50+</h3>
+              <h3 className="text-3xl font-semibold text-indigo-600">3+</h3>
               <p className="text-lg text-gray-700">Business Partners</p>
             </div>
           </div>
