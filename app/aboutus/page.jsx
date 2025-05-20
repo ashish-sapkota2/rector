@@ -79,22 +79,32 @@ export default function AboutUsPage() {
 
   return (
     <div className="container mx-auto px-6 py-12">
-      <h2 className="text-center text-3xl font-bold text-blue-600 mb-8" data-aos="fade-up">
+      <h2
+        className="text-center text-3xl font-bold text-blue-600 mb-8"
+        data-aos="fade-up"
+      >
         About Us
       </h2>
 
       {aboutSections.map((section, index) => (
         <div
           key={index}
-          className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""} items-center mb-12 gap-10`}
+          className={`flex flex-col md:flex-row ${
+            index % 2 === 0 ? "md:flex-row-reverse" : ""
+          } items-center mb-12 gap-10`}
         >
           <div className="md:w-1/2 p-4">
-            <h3 className="text-2xl font-semibold text-blue-600 mb-3">{section.title}</h3>
+            <h3 className="text-2xl font-semibold text-blue-600 mb-3">
+              {section.title}
+            </h3>
             <p className="text-gray-600" style={{ textAlign: "justify" }}>
               {section.description}
             </p>
           </div>
-          <div className="md:w-1/2" data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}>
+          <div
+            className="md:w-1/2"
+            data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+          >
             <img
               src={section.image}
               alt={section.title}
@@ -105,7 +115,10 @@ export default function AboutUsPage() {
       ))}
 
       {/* Team Section */}
-      <h2 className="text-center text-3xl font-bold text-blue-600 mt-16 mb-12" data-aos="fade-up">
+      <h2
+        className="text-center text-3xl font-bold text-blue-600 mt-16 mb-12"
+        data-aos="fade-up"
+      >
         Meet Our Team
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -128,10 +141,16 @@ export default function AboutUsPage() {
             <p className="text-gray-600">{member.role}</p>
             <div className="flex justify-center gap-4 mt-3">
               <Link href={member.linkedin} target="_blank">
-                <FaLinkedin size={24} className="text-blue-700 hover:text-blue-900" />
+                <FaLinkedin
+                  size={24}
+                  className="text-blue-700 hover:text-blue-900"
+                />
               </Link>
               <Link href={`mailto:${member.email}`}>
-                <FaEnvelope size={24} className="text-gray-600 hover:text-gray-400" />
+                <FaEnvelope
+                  size={24}
+                  className="text-gray-600 hover:text-gray-400"
+                />
               </Link>
             </div>
           </div>
