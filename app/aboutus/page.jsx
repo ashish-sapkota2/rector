@@ -1,178 +1,141 @@
 "use client";
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import Link from "next/link";
-// Importing React Icons
-import { FaLinkedin, FaEnvelope } from "react-icons/fa";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
+import Link from "next/link";
+import { FaLinkedin, FaEnvelope } from "react-icons/fa";
 
-export default function Page() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
+export default function AboutUsPage() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const aboutSections = [
+    {
+      title: "Who We Are",
+      description:
+        "We are a passionate team of professionals dedicated to building innovative digital solutions. From development to design, we work closely with our clients to deliver exceptional results that align with their goals.",
+      image: "/group1.jpg",
+    },
+    {
+      title: "What We Do",
+      description:
+        "We specialize in software development, UI/UX design, and digital transformation. Our approach blends creativity, technology, and business insights to create impactful solutions that drive success.",
+      image: "/group2.jpg",
+    },
+    {
+      title: "Our Mission",
+      description:
+        "Our mission is to empower businesses by delivering reliable, scalable, and high-performance software and services. We aim to be a trusted technology partner in your digital journey.",
+      image: "/group3.jpg",
+    },
+  ];
 
   const teamMembers = [
     {
       name: "Ashish Sapkota",
       role: "Lead Developer",
       image: "/ashish.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/ashish-sapkota/",
-        email: "aryanashish223@gmail.com",
-      },
+      linkedin: "https://www.linkedin.com/in/ashish-sapkota/",
+      email: "aryanashish223@gmail.com",
     },
     {
       name: "Om Pandey",
       role: "UX Designer",
       image: "/om.jpg",
-      social: {
-        linkedin: "https://np.linkedin.com/in/oppandey",
-        email: "opanday10.op@gmail.com",
-      },
+      linkedin: "https://np.linkedin.com/in/oppandey",
+      email: "opanday10.op@gmail.com",
     },
     {
       name: "Bimal Thapa",
       role: "UI/UX Designer",
       image: "/bimal.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/bimal-thapa-893517322/",
-        email: "bimal@example.com",
-      },
+      linkedin: "https://www.linkedin.com/in/bimal-thapa-893517322/",
+      email: "bimal@example.com",
     },
     {
       name: "Rabin Gurung",
       role: "Project Manager",
       image: "/oppa.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/rabin-gurung-574b2a220/",
-        email: "rovingrg659@gmail.com",
-      },
+      linkedin: "https://www.linkedin.com/in/rabin-gurung-574b2a220/",
+      email: "rovingrg659@gmail.com",
     },
     {
       name: "Swati Verma",
       role: "Developer",
       image: "/swati.jpeg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/swati-verma-682052229/",
-        email: "swt.swati.sv@gmail.com ",
-      },
+      linkedin: "https://www.linkedin.com/in/swati-verma-682052229/",
+      email: "swt.swati.sv@gmail.com",
     },
     {
       name: "Rajan Chaudhary",
       role: "Developer",
       image: "/rajan.jpg",
-      social: {
-        linkedin: "https://www.linkedin.com/in/rajan-chaudhary-ab54b71b5/",
-        email: "chaudharyrajan24@gmail.com",
-      },
+      linkedin: "https://www.linkedin.com/in/rajan-chaudhary-ab54b71b5/",
+      email: "chaudharyrajan24@gmail.com",
     },
   ];
 
   return (
-    <div className="relative w-full min-h-screen pt-[60px]">
-      {/* About Us Section */}
+    <div className="container mx-auto px-6 py-12">
       <h2 className="text-center text-3xl font-bold text-blue-600 mb-8" data-aos="fade-up">
         About Us
       </h2>
 
-      <div className="bg-white py-16 px-6 flex items-center" data-aos="fade-up">
-        {/* Text Section */}
-        <div className="flex-1 text-center md:text-left">
-          <p
-            className="text-lg text-gray-700 max-w-3xl mx-auto mb-4 pr-8 "
-            style={{ textAlign: "justify" }}
-            data-aos="fade-up"
-          >
-            We are a team of dedicated professionals passionate about building
-            scalable, secure, and high-performance solutions. Our expertise
-            spans software development, UX design, and enterprise application
-            engineering.
-          </p>
-          <p
-            className="text-lg text-gray-700 max-w-3xl mx-auto mb-4 pr-8"
-            style={{ textAlign: "justify" }}
-            data-aos="fade-up"
-          >
-            With a commitment to innovation, we ensure our clients receive
-            tailored technology solutions that drive business success. Our
-            approach combines technical excellence with customer-centric
-            service.
-          </p>
-          <p
-            className="text-lg text-gray-700 max-w-3xl mx-auto mb-4 pr-8"
-            style={{ textAlign: "justify" }}
-          >
-            As a new and ambitious company, we take pride in proving ourselves
-            by delivering outstanding results. Our goal is to be your trusted
-            partner in digital transformation and software engineering.
-          </p>
-        </div>
-
-        {/* Image Section */}
-        <div className="flex-1 hidden md:block" data-aos="fade-left">
-          <Image
-            src="/c1.jpg"
-            alt="About Us Image"
-            width={600}
-            height={400}
-            className="w-full h-auto object-cover rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-
-      {/* Team Section */}
-      <div className="bg-gray-100 py-16 px-6" data-aos="fade-up">
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold mb-12">
-            Meet Our Team
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:translate-y-2 group"
-                data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-              >
-                <div
-                  className="w-36 h-36 mx-auto mb-4 rounded-full overflow-hidden"
-                  data-aos="zoom-in"
-                  data-aos-delay="200"
-                >
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={150}
-                    height={150}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3"
-                  />
-                </div>
-                <h3 className="text-2xl font-semibold text-black mb-2">
-                  {member.name}
-                </h3>
-                <p className="text-lg text-gray-700">{member.role}</p>
-
-                {/* Social Icons */}
-                <div className="flex justify-center gap-4 mt-4">
-                  <Link href={member.social.linkedin}>
-                    <FaLinkedin
-                      size={30}
-                      className="text-blue-700 hover:text-blue-900"
-                    />
-                  </Link>
-                  <Link href={`mailto:${member.social.email}`}>
-                    <FaEnvelope
-                      size={30}
-                      className="text-gray-600 hover:text-gray-400"
-                    />
-                  </Link>
-                </div>
-              </div>
-            ))}
+      {aboutSections.map((section, index) => (
+        <div
+          key={index}
+          className={`flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse" : ""} items-center mb-12 gap-10`}
+        >
+          <div className="md:w-1/2 p-4">
+            <h3 className="text-2xl font-semibold text-blue-600 mb-3">{section.title}</h3>
+            <p className="text-gray-600" style={{ textAlign: "justify" }}>
+              {section.description}
+            </p>
+          </div>
+          <div className="md:w-1/2" data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}>
+            <img
+              src={section.image}
+              alt={section.title}
+              className="w-full h-100 object-cover rounded-lg shadow-md"
+            />
           </div>
         </div>
+      ))}
+
+      {/* Team Section */}
+      <h2 className="text-center text-3xl font-bold text-blue-600 mt-16 mb-12" data-aos="fade-up">
+        Meet Our Team
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {teamMembers.map((member, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-md p-6 text-center"
+            data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+          >
+            <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={150}
+                height={150}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <h3 className="text-xl font-semibold text-black">{member.name}</h3>
+            <p className="text-gray-600">{member.role}</p>
+            <div className="flex justify-center gap-4 mt-3">
+              <Link href={member.linkedin} target="_blank">
+                <FaLinkedin size={24} className="text-blue-700 hover:text-blue-900" />
+              </Link>
+              <Link href={`mailto:${member.email}`}>
+                <FaEnvelope size={24} className="text-gray-600 hover:text-gray-400" />
+              </Link>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

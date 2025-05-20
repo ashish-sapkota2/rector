@@ -29,17 +29,13 @@ export default function Header() {
             <li key={link.href}>
               <Link
                 href={link.href}
-                className={`relative text-lg font-semibold pb-1 ${
-                  pathname === link.href
-                    ? "text-blue-600"
-                    : "text-gray-800 hover:text-blue-600"
-                }`}
+                className="relative text-lg font-semibold pb-1 text-black"
               >
                 {link.label}
                 {/* underline span */}
                 <span
-                  className={`absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 transition-[width] duration-300 ease-in-out ${
-                    pathname === link.href ? "w-full" : "hover:w-full"
+                  className={`absolute left-0 bottom-0 h-0.5 bg-blue-600 transition-all duration-300 ease-in-out ${
+                    pathname === link.href ? "w-full" : "w-0"
                   }`}
                 />
               </Link>
